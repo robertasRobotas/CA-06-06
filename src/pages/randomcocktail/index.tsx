@@ -32,15 +32,35 @@ const RandomCocktailPage = () => {
       </div>
 
       <div className={styles.wrapper}>
-        {randomCocktail && (
+        {randomCocktail ? (
           <>
             {/* @ts-ignore */}
-            <div>{randomCocktail.strDrink}</div>
-            {/* @ts-ignore */}
-            <div>{randomCocktail.strAlcoholic}</div>
+            <h1>{randomCocktail.strDrink}</h1>
+            <img
+              className={styles.cocktailPhoto}
+              alt="cocktail photo"
+              /* @ts-ignore */
+              src={randomCocktail.strDrinkThumb}
+            />
+            <div>
+              {/* @ts-ignore */}
+              {randomCocktail.strAlcoholic === "Alcoholic" ? (
+                <>Gėrimas alkoholinis, atsargiai</>
+              ) : (
+                <>Gėrimas be alkoholio</>
+              )}
+            </div>
           </>
+        ) : (
+          <div>Loading.....</div>
         )}
       </div>
+
+      {/* <div className={styles.wrapperX}>
+        <div>xxxx</div>
+        <>yyyy</>
+        <div>zzzz</div>
+      </div> */}
 
       {/* {isDisplayName && <div>Tadas</div>} */}
     </>

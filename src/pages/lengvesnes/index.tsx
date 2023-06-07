@@ -6,6 +6,18 @@ const LengvesnesPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const isAllInputsFilled = name && email && password;
+
+  const displayUserData = () => {
+    if (isAllInputsFilled) {
+      console.log(name);
+      console.log(email);
+      console.log(password);
+    } else {
+      console.log("Please insert all necessary fields");
+    }
+  };
+
   return (
     <>
       <div>Lengvesnes uzd:</div>
@@ -27,11 +39,9 @@ const LengvesnesPage = () => {
           placeholder="password"
         />
         <button
-          onClick={() => {
-            console.log(name);
-            console.log(email);
-            console.log(password);
-          }}
+          disabled={!isAllInputsFilled}
+          className={isAllInputsFilled ? styles.buttonOk : styles.buttonNotOk}
+          onClick={() => displayUserData()}
         >
           Click me
         </button>
