@@ -5,33 +5,3 @@
     gap:20px;
 }
 
-
-.cocktailsCard{
-    width: 100%;
-    height: 400px;
-    background-color: cadetblue;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.coctailImage{
-    width: 80%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.alkoholicCocktailIndicator{
-    background-color: brown;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
-
-.nonAlkoholicCocktailIndicator{
-    background-color: rgb(27, 137, 47);
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-}
